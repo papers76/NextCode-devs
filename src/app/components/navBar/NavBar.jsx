@@ -3,31 +3,31 @@ import Link from 'next/link';
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <nav className='bg-zinc-400 text-black font-semibold '>
+      <ul className='flex flex-col sm:flex sm:flex-row ' >
+        <li  className='mx-4'> 
           <Link href="#section-1">
-            Seccion 1
+            INICIO
           </Link>
         </li>
-        <li>
+        <li  className='mx-4'>
           <Link href="#section-2">
-            Seccion 2
+            SERVICIOS
           </Link>
         </li>
-        <li>
+        <li  className='mx-4'>
           <Link href="#section-3">
-            Seccion 3
+            NOSOTROS
           </Link>
         </li>
-        <li>
+        <li  className='mx-4'>
           <Link href="#section-4">
-            Seccion 4
+            PROYECTOS
           </Link>
         </li>
-        <li>
+        <li  className='mx-4'>
           <Link href="#section-5">
-            Seccion 5
+            CONTACTANOS
           </Link>
         </li>
       </ul>
