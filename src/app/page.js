@@ -1,4 +1,6 @@
+import HomeB from "./components/homeBanner/Home";
 import NavBar from "./components/navBar/NavBar";
+
 
 
 export default function Home() {
@@ -6,8 +8,8 @@ export default function Home() {
     <main>
 
      <NavBar/>
+     <HomeB/>
      
-
 
     </main>
   );
