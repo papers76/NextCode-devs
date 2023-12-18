@@ -20,3 +20,6 @@
     object-fit: cover;
   }
   
+  .darkImage {
+    background-image: url('https://cdn.pixabay.com/photo/2016/12/09/21/13/background-1896043_640.jpg');
+  }
