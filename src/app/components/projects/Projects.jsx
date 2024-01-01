@@ -57,7 +57,7 @@ const Project = () => {
   }));
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-black">
       <div className="">
         <div className="flex flex-col flex-wrap h-full gap-0 mx-2 md:grid md:grid-cols-3 md:mx-0">
           {ProjectB.map((x, index) => {

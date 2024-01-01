@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 // Reusable SocialIcon component with hover effect
 const SocialIcon = ({ icon: Icon }) => (
-  <Icon className="social-icon hover:text-[#00df9a]" size={30} />
+  <Icon className="social-icon hover:text-cyan-600" size={30} />
 );
 // Footer component
 const Footer = () => {
@@ -31,10 +31,10 @@ const Footer = () => {
   ];
   // JSX structure of the footer
   return (
-    <div className='bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+    <div id='contact' className='bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
       {/* Left section with brand and social icons */}
       <div>
-        <h1 className='w-full text-3xl lg:text-4xl xl:text-5xl font-bold text-[#00df9a]'>Nexo.</h1>
+        <h1 className='w-full text-3xl font-bold lg:text-4xl xl:text-5xl text-cyan-600'>Nexo.</h1>
         <p className='py-4'>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.
         </p>
@@ -48,12 +48,12 @@ const Footer = () => {
         </div>
       </div>
       {/* Right section with footer content organized in sections */}
-      <div className='lg:col-span-2 flex justify-between mt-6'>
+      <div className='flex justify-between mt-6 lg:col-span-2'>
         {/* Mapping over sections and rendering content */}
         {items.map((item, index) => (
           item.type === 'section' ? (
             <div key={index}>
-              <h6 className="font-medium text-gray-100 text-xl">{item.title}</h6>
+              <h6 className="text-xl font-medium text-gray-100">{item.title}</h6>
               <ul>
                 {/* Mapping over items in each section */}
                 {item.items.map((subItem, subIndex) => (

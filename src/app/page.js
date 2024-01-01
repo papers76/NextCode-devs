@@ -21,7 +21,7 @@ export default function Home() {
      
      <AboutUs />
      
-     <div className="w-full my-24">
+     <div >
       <Project />
     </div>
      

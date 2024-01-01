@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className='font-semibold text-black bg-zinc-400 '>
+    <nav className='font-semibold text-white bg-black'>
       <div className='container flex items-center justify-between mx-auto h-36 sm:h-12'>
         <div className='flex content-center text-white item-center'>Logo</div>
 
