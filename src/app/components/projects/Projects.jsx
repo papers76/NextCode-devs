@@ -15,7 +15,7 @@ const Project = () => {
   const ProjectB = [
 // you can add more image if you want
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-1.jpg",
+      imageUrl: "/images/project1.jpg",
       type: "Nature",
       title: "Beautiful Work",
     },
@@ -29,16 +29,7 @@ const Project = () => {
       type: "Nature",
       title: "Beautiful Work",
     },
-    {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-4.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
-    },
-    {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-5.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
-    },
+    
   ];
 
 
