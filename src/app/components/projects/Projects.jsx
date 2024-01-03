@@ -15,19 +15,19 @@ const Project = () => {
   const ProjectB = [
 // you can add more image if you want
     {
-      imageUrl: "/images/project1.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
+      imageUrl: "https://images.pexels.com/photos/11213201/pexels-photo-11213201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      type: "Proyecto 1",
+      title: "Administracion Barberia",
     },
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-2.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
+      imageUrl: "https://images.pexels.com/photos/5792322/pexels-photo-5792322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      type: "Proyecto 2",
+      title: "Administracion Pizzeria",
     },
     {
-      imageUrl: "https://themewagon.github.io/snapshot/images/model-3.jpg",
-      type: "Nature",
-      title: "Beautiful Work",
+      imageUrl: "https://images.pexels.com/photos/7319158/pexels-photo-7319158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      type: "Proyecto 3",
+      title: "Administracion Conferencias",
     },
     
   ];
