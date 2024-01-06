@@ -25,7 +25,7 @@ const Project = () => {
       title: "Administracion Pizzeria",
     },
     {
-      imageUrl: "https://images.pexels.com/photos/7319158/pexels-photo-7319158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imageUrl: "https://images.pexels.com/photos/11585359/pexels-photo-11585359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       type: "Proyecto 3",
       title: "Administracion Conferencias",
     },
