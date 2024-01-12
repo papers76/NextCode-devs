@@ -44,10 +44,10 @@ const NavBar = () => {
             <Link href="#home">Inicio</Link>
           </li>
           <li className="p-4">
-            <Link href="#galeria">Servicios</Link>
+            <Link href="#servicios">Servicios</Link>
           </li>
           <li className="p-4">
-            <Link href="#trabajos">Nosotros</Link>
+            <Link href="#nosotros">Nosotros</Link>
           </li>
           <li className="p-4">
             <Link href="#Proyectos">Proyectos</Link>
@@ -78,13 +78,13 @@ const NavBar = () => {
               <Link href="#home">Inicio</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="#galeria">Servicios</Link>
+              <Link href="#servicios">Servicios</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="#trabajos">Nosotros</Link>
+              <Link href="#nosotros">Nosotros</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="#trabajos">Proyectos</Link>
+              <Link href="#proyectos">Proyectos</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
               <Link href="#contactos">Contactos</Link>
