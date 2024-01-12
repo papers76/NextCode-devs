@@ -33,7 +33,7 @@ const servicesData = [
 function Services() {
   return (
     <div className="flex items-center justify-center pt-4 pb-8 bg-zinc-800">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
         <h3 className="mt-2 mb-4 text-4xl font-bold text-white col-span-full md:mt-4">
           Nuestros Servicios
         </h3>
