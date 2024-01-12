@@ -31,7 +31,7 @@ const Footer = () => {
   ];
   // JSX structure of the footer
   return (
-    <div id='contact' className='bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+    <div id='contactos' className='bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
       {/* Left section with brand and social icons */}
       <div>
         <h1 className='w-full text-3xl font-bold lg:text-4xl xl:text-5xl text-cyan-600'>Nexo.</h1>

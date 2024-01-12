@@ -9,8 +9,8 @@ const servicesData = [
       "https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_640.jpg",
   },
   {
-    title: "Aplicaciones de escritorio y móviles",
-    description: "Descripción acorde a este servicio",
+    title: "App de escritorio y móviles",
+    description: "Potenciamos tu presencia digital con apps de escritorio y móviles innovadoras y personalizadas. ¡Contáctanos ahora!",
     imageSrc:
       "https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_640.jpg",
   },
@@ -32,7 +32,7 @@ const servicesData = [
 
 function Services() {
   return (
-    <div className="flex items-center justify-center pt-4 pb-8 bg-zinc-800">
+    <div id="servicios" className="flex items-center justify-center pt-4 pb-8 bg-zinc-800">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
         <h3 className="mt-2 mb-4 text-4xl font-bold text-white col-span-full md:mt-4">
           Nuestros Servicios

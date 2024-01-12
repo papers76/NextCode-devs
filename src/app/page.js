@@ -6,7 +6,6 @@ import HomeB from "./components/homeBanner/Home";
 import NavBar from "./components/navBar/NavBar";
 import Project from "./components/projects/Projects";
 import Services from "./components/services/Services";
-import Cards from "./components/about-us/Cards";
 
 
 
@@ -21,7 +20,7 @@ export default function Home() {
      <Services/>  
      
      <AboutUs />
-     <Cards/>
+    
      
      <div >
       <Project />
