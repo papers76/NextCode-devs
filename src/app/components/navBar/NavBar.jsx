@@ -1,73 +1,100 @@
-"use client"; // This is a client components
-import { useState } from 'react';
-import Link from 'next/link';
+"use client"
+import React, { useState, useEffect } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Link from "next/link";
 
 const NavBar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [nav, setNav] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+  const [color, setColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("White");
+
+  const handleNav = () => {
+    setNav(!nav);
   };
 
-  return (
-    <nav className='font-semibold text-black bg-zinc-400 '>
-      <div className='container flex items-center justify-between mx-auto h-36 sm:h-12'>
-        <div className='flex content-center text-white item-center'>Logo</div>
 
-        <ul className={` flex-col sm:flex sm:flex-row ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <li className='m-0 mx-4 transition-all duration-300 hover:bg-zinc-500 hover:rounded-lg'>
-            <Link className='flex content-center item-center' href='#section-1'>INICIO</Link>
+  useEffect(()=> {
+    const changeColor = () => {
+      if(window.scrollY >= 90) {
+        setColor('#000000');
+        setTextColor('#ffffff');
+      } else {
+        setColor('transparent');
+        setTextColor('#ffffff');
+      }
+    }
+    window.addEventListener('scroll',changeColor )
+  },[]);
+
+  return (
+    <div
+      style={{ backgroundColor: `${color}` }}
+      className="fixed top-0 left-0 z-10 w-full duration-300 ease-in"
+    >
+      <div className="max-width-[1240px] m-auto flex  justify-between items-center p-4  text-white">
+        <Link href="/">
+          <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
+            NextCode
+          </h1>
+        </Link>
+
+        <ul style={{ color: `${textColor}` }} className="hidden sm:flex ">
+          <li className="p-4">
+            <Link href="#home">Inicio</Link>
           </li>
-          <li className='mx-4 hover:bg-zinc-500 hover:rounded-lg'>
-            <Link href='#section-2'>SERVICIOS</Link>
+          <li className="p-4">
+            <Link href="#galeria">Servicios</Link>
           </li>
-          <li className='mx-4 hover:bg-zinc-500 hover:rounded-lg'>
-            <Link href='#section-3'>NOSOTROS</Link>
+          <li className="p-4">
+            <Link href="#trabajos">Nosotros</Link>
           </li>
-          <li className='mx-4 hover:bg-zinc-500 hover:rounded-lg'>
-            <Link href='#section-4'>PROYECTOS</Link>
+          <li className="p-4">
+            <Link href="#Proyectos">Proyectos</Link>
           </li>
-          <li className='mx-4 hover:bg-zinc-500 hover:rounded-lg'>
-            <Link href='#section-5'>CONTACTO</Link>
+          <li className="p-4">
+            <Link href="#contactos">Contactos</Link>
           </li>
         </ul>
 
-        <div className='sm:hidden'>
-        <button onClick={toggleMenu} className='text-white focus:outline-none'>
-            {isMenuOpen ? (
-              /* Si el menú está abierto, muestra la X */
-              <svg
-                className='w-6 h-6'
-                fill='none'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
-                <path d='M6 18L18 6M6 6l12 12'></path>
-              </svg>
-            ) : (
-              /* Si el menú está cerrado, muestra las tres rayas */
-              <svg
-                className='w-6 h-6'
-                fill='none'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
-                <path d='M4 6h16M4 12h16m-7 6h7'></path>
-              </svg>
-            )}
-          </button>
+        {/* Mobile Button */}
+        <div onClick={handleNav} className="z-10 block sm:hidden">
+          {nav ? (
+            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+          ) : (
+            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+          )}
         </div>
-
-        
+        {/* Mobile Button */}
+        <div
+          className={
+            nav
+              ? "absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center w-full h-screen text-center duration-300 ease-in bg-black sm:hidden"
+              : "absolute top-0 bottom-0 left-[-100%] right-0 flex items-center justify-center w-full h-screen text-center duration-300 ease-in bg-black sm:hidden "
+          }
+        >
+          <ul>
+            <li className="p-4 text-4xl hover:text-gray-400">
+              <Link href="#home">Inicio</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-400">
+              <Link href="#galeria">Servicios</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-400">
+              <Link href="#trabajos">Nosotros</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-400">
+              <Link href="#trabajos">Proyectos</Link>
+            </li>
+            <li className="p-4 text-4xl hover:text-gray-400">
+              <Link href="#contactos">Contactos</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </nav>
+    </div>
   );
 };
+
 
 export default NavBar;
