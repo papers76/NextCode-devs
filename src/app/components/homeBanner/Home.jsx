@@ -6,19 +6,19 @@ function Home() {
   return (
     <div
       className={classNames(
-        'flex items-center justify-center h-screen bg-cover bg-center relative',
-        'bg-opacity-70',
+        'flex items-center justify-center mb-0 h-screen bg-center bg-fixed h-screen bg-cover bg-center relative',
+        'opacity-100  ',
         styles.darkImage 
       )}
     >
       <div className="text-center text-white">
-        <h1 className="text-4xl font-bold mb-4">Nexo Desarrollo</h1>
-        <p className="text-lg mb-8">
+        <h1 className="mb-4 text-5xl font-bold">El Tucu Digital</h1>
+        <p className="mb-8 text-lg">
           Tu socio en desarrollo web, aplicaciones móviles y aplicaciones de escritorio.
         </p>
         <a
           href="#contact"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300"
+          className="px-4 py-2 text-xl font-bold text-black transition duration-300 bg-white rounded-full"
         >
           ¡Contáctanos!
         </a>
