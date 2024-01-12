@@ -28,7 +28,6 @@ const NavBar = () => {
   },[]);
 
   return (
-
     <div
       style={{ backgroundColor: `${color}` }}
       className="fixed top-0 left-0 z-10 w-full duration-300 ease-in"
@@ -39,11 +38,6 @@ const NavBar = () => {
             NextCode
           </h1>
         </Link>
-
-    <nav className='font-semibold text-white bg-black'>
-      <div className='container flex items-center justify-between mx-auto h-36 sm:h-12'>
-        <div className='flex content-center text-white item-center'>Logo</div>
-
 
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex ">
           <li className="p-4">
