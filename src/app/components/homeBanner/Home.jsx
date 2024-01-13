@@ -12,7 +12,7 @@ function Home() {
       )}
     >
       <div className="text-center text-white">
-        <h1 className="mb-4 text-5xl font-bold">El Tucu Digital</h1>
+        <h1 className="mb-4 text-5xl font-bold"> NEXT CODE </h1>
         <p className="mb-8 text-lg">
           Tu socio en desarrollo web, aplicaciones móviles y aplicaciones de escritorio.
         </p>
