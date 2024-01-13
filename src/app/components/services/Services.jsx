@@ -6,11 +6,11 @@ const servicesData = [
     description:
       "Ofrecemos el desarrollo desde landing page hasta sitios web empresariales o autoadministrables",
     imageSrc:
-      "https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_640.jpg",
+      "/images/notebook.jpg",
   },
   {
     title: "App de escritorio y móviles",
-    description: "Potenciamos tu presencia digital con apps de escritorio y móviles innovadoras y personalizadas. ¡Contáctanos ahora!",
+    description: "Potenciamos tu presencia digital con apps de escritorio y móviles innovadoras y personalizadas.",
     imageSrc:
       "https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_640.jpg",
   },
@@ -32,34 +32,31 @@ const servicesData = [
 
 function Services() {
   return (
-    <div id="servicios" className="flex items-center justify-center pt-4 pb-8 bg-zinc-800">
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <h3 className="mt-2 mb-4 text-4xl font-bold text-white col-span-full md:mt-4">
-          Nuestros Servicios
-        </h3>
+    <div id="servicios" className="flex flex-col items-center justify-center pt-4 pb-8 bg-zinc-800">
+      <h3 className="mt-2 mb-4 text-4xl font-bold text-white">
+        Nuestros Servicios
+      </h3>
+      <div className="flex flex-wrap justify-center gap-5">
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="relative items-center justify-center overflow-hidden transition-shadow cursor-pointer group hover:shadow-xl hover:shadow-black/30"
+            className="relative flex flex-col items-center mb-8 overflow-hidden transition-shadow cursor-pointer group hover:shadow-xl hover:shadow-black/30"
           >
-            <div className="h-96 w-72">
+            <div className="relative overflow-hidden h-96 w-80 group">
               <img
-                className="object-cover w-full h-full transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                className="object-cover w-full h-full transition-transform duration-500 group-hover:rotate-0 group-hover:scale-105"
                 src={service.imageSrc}
                 alt=""
               />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 px-9 group-hover:translate-y-0">
               <h1 className="text-3xl font-bold text-white font-dmserif">
                 {service.title}
               </h1>
               <p className="mb-3 text-lg italic text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                 {service.description}
               </p>
-              <button className="rounded-full bg-cyan-600 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                See More
-              </button>
             </div>
           </div>
         ))}

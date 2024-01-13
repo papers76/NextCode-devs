@@ -10,7 +10,7 @@ const AboutUs = () => {
           <h1 className="mb-4 text-6xl font-bold text-white sm:text-5xl">
             Sobre Nosotros
           </h1>
-          <p className="text-lg italic text-gray-200 sm:text-3xl">
+          <p className="text-3xl italic text-gray-200 sm:text-3xl">
           Bienvenido a<span className="text-4xl text-cyan-600"> NextCode</span>, tu socio confiable en el mundo de la programación y desarrollo web.
           </p>
         </div>

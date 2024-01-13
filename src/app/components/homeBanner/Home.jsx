@@ -17,7 +17,7 @@ function Home() {
           Tu socio en desarrollo web, aplicaciones móviles y aplicaciones de escritorio.
         </p>
         <a
-          href="#contact"
+          href="#contactos"
           className="px-4 py-2 text-xl font-bold text-black transition duration-300 bg-white rounded-full"
         >
           ¡Contáctanos!
