@@ -35,7 +35,7 @@ const NavBar = () => {
       <div className="max-width-[1240px] m-auto flex  justify-between items-center p-4  text-white">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="text-4xl font-bold">
-            NextCode
+            <img className="rounded-xl" src="/images/logo2.png" alt="" height={70} width={70}/>
           </h1>
         </Link>
 
