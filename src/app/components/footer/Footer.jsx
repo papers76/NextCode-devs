@@ -1,91 +1,67 @@
-// Importing necessary React and icon components
 import React from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import {
-  FaDribbbleSquare,
   FaFacebookSquare,
   FaGithubSquare,
   FaInstagram,
   FaTwitterSquare,
+  FaWhatsapp, // Importar el icono de WhatsApp
 } from "react-icons/fa";
-// Reusable SocialIcon component with hover effect
-const SocialIcon = ({ icon: Icon }) => (
-  <Icon className="social-icon hover:text-cyan-600" size={30} />
+
+const SocialIcon = ({ icon: Icon, link }) => (
+  <a href={link} target="_blank" rel="noopener noreferrer">
+    <Icon className="social-icon hover:text-cyan-600" size={30} />
+  </a>
 );
-// Footer component
+
 const Footer = () => {
-  // Array defining the content and structure of the footer
   const items = [
-    // Social media icons
-    { type: "icon", icon: MdOutgoingMail },
-    { type: "icon", icon: FaInstagram },
-    { type: "icon", icon: FaTwitterSquare },
-    /*{ type: 'icon', icon: FaGithubSquare },
-    { type: 'icon', icon: FaDribbbleSquare },*/
-    // Footer sections
-    { type: "section", title: "Servicios", items: ["", ] },
-    { type: "section", title: "Nosotros", items: ["",  ] },
-    { type: "section", title: "Proyectos", items: ["", ] },
-    { type: "section", title: "Legales", items: ["",   ] },
+    { type: "icon", icon: MdOutgoingMail, link: "https://mail.google.com/mail/u/1/#inbox" }, // Reemplazar con tu dirección de correo
+    { type: "icon", icon: FaInstagram, link: "https://www.instagram.com/iamnextcodedevs?igsh=MTg1dGRvZXNmYjNhNQ==" },
+    { type: "icon", icon: FaWhatsapp, link: "https://wa.me/tunumerodetelefono" }, // Reemplazar con tu número de teléfono en el formato internacional
   ];
-  // JSX structure of the footer
+
+  const sections = [
+    { title: "Servicios", items: [""] },
+    { title: "Nosotros", items: [""] },
+    { title: "Proyectos", items: [""] },
+    { title: "Legales", items: [""] },
+  ];
+
   return (
-    <div
-      id="contactos"
-      className="bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300"
-    >
-      {/* Left section with brand and social icons */}
+    <div className="bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300">
       <div>
         <h1 className="w-full text-3xl font-bold lg:text-4xl xl:text-5xl text-cyan-600">
           NextCode Devs
         </h1>
         <p className="py-4 text-justify">
-          Una empresa conformada por profesionales en
-          el area de Tecnologia IT. 
-          Nos enfocamos principalmente a prestar servicios en desarrollos
-          multiplataforma con .Net, Next y Node Js.
+          Una empresa conformada por profesionales en el área de Tecnología IT.
+          Nos enfocamos principalmente a prestar servicios en desarrollos multiplataforma con .Net, Next y Node Js.
         </p>
         <div className="flex justify-between md:w-[75%] my-6">
-          {/* Mapping over social icons and rendering the SocialIcon component */}
-          {items.map((item, index) =>
-            item.type === "icon" ? (
-              <SocialIcon key={index} icon={item.icon} />
-            ) : null
-          )}
+          {items.map((item, index) => (
+            <SocialIcon key={index} icon={item.icon} link={item.link} />
+          ))}
         </div>
       </div>
-      {/* Right section with footer content organized in sections */}
       <div className="flex justify-between mt-6 lg:col-span-2">
-        {/* Mapping over sections and rendering content */}
-        {items.map((item, index) =>
-          item.type === "section" ? (
-            <div key={index}>
-              <h6 className="text-xl font-medium text-gray-100">
-                {item.title}
-              </h6>
-              <ul>
-                {/* Mapping over items in each section */}
-                {item.items.map((subItem, subIndex) => (
-                  <li key={subIndex} className="py-2 text-sm">
-                    {subItem}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null
-        )}
+        {sections.map((section, index) => (
+          <div key={index}>
+            <h6 className="text-xl font-medium text-gray-100">{section.title}</h6>
+            <ul>
+              {section.items.map((item, subIndex) => (
+                <li key={subIndex} className="py-2 text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default Footer;
 
-/*
-import React from 'react'
 
-export default function Footer() {
-  return (
-    <div>Footer</div>
-  )
-}
-*/
