@@ -50,7 +50,7 @@ const NavBar = () => {
             <Link href="#nosotros">Nosotros</Link>
           </li>
           <li className="p-4">
-            <Link href="#Proyectos">Proyectos</Link>
+            <Link href="#proyectos">Proyectos</Link>
           </li>
           <li className="p-4">
             <Link href="#contactos">Contactos</Link>
